@@ -1,0 +1,190 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*基本*/
+body{ margin: 0; padding: 0;}
+
+
+/*全BOX版面*/
+.WRAPPER { position: relative; display: block; margin: 0 auto; padding: 0; width: 100%;  min-width: 1220px; overflow: hidden; font-family: "微軟正黑體","Microsoft JhengHei",Helvetica; background: #000;}
+.WRAPPER img { border: 0; vertical-align: top;}
+.WRAPPER a { text-decoration: none;}
+@media screen and (max-width:767px){
+  .WRAPPER { min-width: inherit; padding-bottom: 10vw; }
+  .WRAPPER img {  width: 100%;  height: auto;}
+}
+	
+/*背景*/
+.bgdeco { z-index: 0; position: absolute; top: 15px; left: 0; width: 100%; min-width: 1220px; height: 100%; background: url(bgdeco_new.png) repeat-y center top; mix-blend-mode: lighten; transition: 0.5s linear; pointer-events: none;}
+.bgtop { z-index: 0; position: absolute; top: 0; left: 0; width: 100%; min-width: 1220px; height: 100%; background: url(bgtop_new.png) no-repeat center top;}
+.bgfixed { z-index: 0; position: fixed; top: 650px; left: 0; width: 100%; min-width: 1220px; height: 100%; background: url(bgfixed_new.jpg) no-repeat center top;}
+@media screen and (max-width:767px){
+  .bgtop { min-width: inherit;  background: url(m_bgtop_new.png) no-repeat center 44px; background-size: 100%;}
+}
+
+/*區塊_all*/
+.Area { position: relative; margin: 0 auto; padding: 0; border-radius: 0; text-align: center; }
+.Area a { display: block;} 
+.Area .go_bt {
+  -webkit-transition: all 0.4s ease;
+     -moz-transition: all 0.4s ease;
+      -ms-transition: all 0.4s ease;
+       -o-transition: all 0.4s ease;
+          transition: all 0.4s ease;}
+.Area .go_bt:hover {
+  -webkit-transform: scale(0.95);
+     -moz-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+       -o-transform: scale(0.95);
+          transform: scale(0.95);}
+.Area .go_bt2 {
+  -webkit-transition: all 0.4s ease;
+     -moz-transition: all 0.4s ease;
+      -ms-transition: all 0.4s ease;
+       -o-transition: all 0.4s ease;
+          transition: all 0.4s ease;}
+.Area .go_bt2:hover { 
+  filter: brightness(130%);
+  -webkit-transform: translateY(-10px);
+     -moz-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+       -o-transform: translateY(-10px);
+          transform: translateY(-10px);
+		  }
+.Area1220 { margin: 0 auto; width: 1220px;}
+.Area960 { margin: 0 auto; width: 960px;}
+@media screen and (max-width:767px){
+  .Area .go_bt:hover {  
+    -webkit-transform: none;
+     -moz-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;}
+  .Area .go_bt2:hover { 
+    filter: brightness(1);
+    -webkit-transform: none;
+       -moz-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+        }
+  .Area1220 { width: 100%;}
+  .Area960 { width: 100%;}
+  /*區塊_切割*/
+  .Area_1bn { margin: 0 auto; padding: 0; overflow: hidden;}
+  .Area_1bn a { float: left; margin: 0 0 2% 0; padding: 0; width: 100%; list-style: none;}
+  .Area_2bn { margin: 0 auto; padding: 0; overflow: hidden;}
+  .Area_2bn a { float: left; margin: 0 1% 2%; padding: 0; width: 48%; list-style: none;}
+  .Area_3bn { margin: 0 auto; padding: 0; overflow: hidden;}
+  .Area_3bn a { float: left; margin: 0 1% 2% ; padding: 0; width: 31.3%; list-style: none;}
+  .Area_1bn_nopadding { margin: 0 auto; padding: 0; overflow: hidden;}
+  .Area_1bn_nopadding a { float: left; margin: 0; padding: 0; width: 100%; list-style: none;}
+  .Area_2bn_nopadding { margin: 0 auto; padding: 0; overflow: hidden;}
+  .Area_2bn_nopadding a { float: left; margin: 0; padding: 0; width: 50%; list-style: none;}
+  .Area_3bn_nopadding { margin: 0 auto; padding: 0; overflow: hidden;}
+  .Area_3bn_nopadding a { float: left; margin: 0; padding: 0; width: 33.3%; list-style: none;}
+}
+
+/*間距*/
+.Area_bottom { margin-bottom: 50px;}
+@media screen and (max-width:767px){
+  .Area_bottom { margin-bottom: 10vw;}
+}
+
+/*共用樣式*/
+.pointer-off ul li{ pointer-events: none;}
+@media screen and (max-width:767px){
+}
+
+/*版頭*/
+.Area_top { height: 760px;}
+.Area_top .momologo { z-index: 2; position: absolute; top: 20px; left: 20px;}
+.Area_top .momologo a { display: block; width: 200px; height: 30px; background: url(momo_logo_new.png) no-repeat;}
+.Area_top .momologo a:hover { background: url(momo_logo_new.png) no-repeat;}
+.Area_top .light{ z-index: 3; position: absolute; mix-blend-mode: screen; top: 95px; right: 10px;}
+.Area_top .lightdot { position: absolute; mix-blend-mode: screen; top: 200px; left: 360px;}
+.Area_top .main { position: absolute; width: 600px; top: 83px; right: 40px;}
+.Area_top .subtitle { position: absolute; width: 450px; top: 270px; right: 158px;}
+.Area_top .topPD { position: absolute; width: 500px; top: 190px; left: 135px;}
+@media screen and (max-width:767px){
+  .Area_top { height: 120vw;}
+  .Area_top .momologo { display: none;}
+  .Area_top .light{ width: 76vw; top: 9vw; left: 13vw;}
+  .Area_top .lightdot { width: 40vw; top: 55vw; left: 60vw;}
+  .Area_top .main { width: 72vw; top: 8vw; left: 14vw;}
+  .Area_top .subtitle { width: 55vw; top: 30vw; left: 16.5vw;}
+  .Area_top .topPD { width: 68vw; top: 50vw; left: 22vw;}
+}
+
+/*9/2-9/9 回饋大放送*/
+.Area01 { margin-top: -200px;}
+.Area01 .active ul li { margin: 0 auto 50px;}
+@media screen and (max-width:767px){
+  .Area01 { margin-top: -70vw;}
+  .Area01 .active ul li { margin: 0 auto 5vw; padding: 0 1.5vw;}
+  .Area01 .Area_danji { padding: 0 1.5vw;}
+}
+
+/*強檔好禮 限量送*/
+.Area02 .BN_box ul li { padding: 0 10px 10px;}
+.Area02 .BN_box_l ul li { padding: 10px;}
+@media screen and (max-width:767px){
+  .Area02 .BN_box ul{ padding: 0 1vw;}
+  .Area02 .BN_box_l ul{ padding: 0 1vw;}
+  .Area02 .BN_box ul li { padding: 0 0.5vw 0.5vw;}
+  .Area02 .BN_box_l ul li { padding: 0.5vw;}
+}
+
+/*重磅夯品 強勢來襲*/
+.Area03 {}
+.Area03 .vedio_R { margin-left: 270px;}
+.Area03 .vedio_L { margin-left: 90px;}
+.Area03 .PD_box { margin: -36px 80px 20px 80px;}
+.Area03 .PD_box ul { padding: 0;}
+.Area03 .font_box { margin-bottom: 10px; padding-bottom: 20px;}
+.Area03 .font_box:last-child { margin-bottom: 0;}
+
+.font_box { width: 80%; height: 247px; margin: 0 auto; background: url(font_box_new.png) top center no-repeat; text-align: left; font-size: 30px; font-weight: 400; padding: 30px 0 0 100px;}
+.font_box ul { list-style: disc; padding: 0 60px; grid-gap: 0;}
+.font_box ul li { pointer-events: none;}
+.font_box ul li p { margin: 0.3em 0; color: #fff;}
+.font_box ul li::marker { color: #fff;}
+@media screen and (max-width:767px){
+  .font_box { width: 96%; font-size: 4vw; line-height: 4.5vw;}
+  .font_box ul { padding: 0 2em;}
+}
+@media screen and (max-width:767px){
+  .Area03 {}
+  .Area03 .vedio_R { margin-left: 7vw;}
+  .Area03 .vedio_L { margin-left: 2vw;}
+  .Area03.A2_1 .PD_box { margin: -4vw 0 2vw 0; padding: 0 1.5vw;}
+  .Area03 .font_box { margin-bottom: 2%; padding-bottom: 2%; width: 100%; height: 30vw; background-size: 96vw; font-size: 16px;}
+  .font_box { padding: 2vw 10vw;}
+}
+/*影片*/
+.box_youtube { position: relative; z-index: 0;}
+.box_youtube .youtubeArea { position: relative; width: 100%; height: 0; padding-bottom: 56.25%;}
+.box_youtube .youtubeArea * { margin: 0; padding: 0;}
+.box_youtube .youtubeArea iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+.box_youtube .youtubeArea .youtubeDiv { background-color: transparent!important;}
+@media screen and (min-width:768px){
+  .box_youtube { width: 820px;}
+}
+@media screen and (max-width:767px){
+  .box_youtube { width: 85vw;}
+}
+
+/*BTN*/
+.Area05 .PD_layout ul li { padding: 10px;}
+@media screen and (max-width:767px){
+  .Area05 .PD_layout ul { padding: 0 8vw;}
+  .Area05 .PD_layout ul li { padding: 2vw;}
+}
+
+/*隱鑶*/
+.for_pc {}
+.for_phone { display: none !important;}
+	@media screen and (max-width:767px){
+		.for_pc { display: none !important;}
+		.for_phone { display: inherit !important;}
+	}
